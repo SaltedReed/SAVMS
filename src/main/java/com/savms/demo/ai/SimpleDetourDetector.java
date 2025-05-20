@@ -24,7 +24,7 @@ public class SimpleDetourDetector implements DetourDetector {
         this.mediaType = MediaType.parse("application/json");
     }
 
-    public String execute(DetourDetectCommand cmd) {
+    public boolean execute(DetourDetectCommand cmd) {
         final String prompt = String.format("I will give you the source and destination of a route and the current position of a vehicle. " +
                 "You need to decide whether a driver is detouring or not by calculating if the current position is far away from the intended route defined by the source and the destination. " +
                 "The source is %s. The destination is %s. The current position is %s. All of them are shown in the coordination of latitude and longitude. " +

@@ -19,11 +19,11 @@ public class DetourDetectorDemo {
 
         DetourDetector detourDetector = new SimpleDetourDetector();
 
-        String resNotDetour = detourDetector.execute(cmdNotDetouring);
-        String resDetour = detourDetector.execute(cmdDetouring);
+        boolean res1 = detourDetector.execute(cmdNotDetouring);
+        System.out.println(res1);
 
-        System.out.println(resNotDetour);
+        boolean res2 = detourDetector.execute(cmdDetouring);
         System.out.println("===============");
-        System.out.println(resDetour);
+        System.out.println(res2);
     }
 }
